@@ -95,6 +95,9 @@
     .card-info p {
       margin: 0.3rem 0;
     }
+     audio {
+      display: none;
+    }
 
     @keyframes fadeIn {
       from {opacity: 0; transform: translateY(20px);}
@@ -110,13 +113,17 @@
   <section class="message">
     <p>Wishing you the happiest of birthdays! You are one of a kind, so here’s a unique gift just for you. Click below to reveal your exclusive digital collectible 🎁</p>
     <button class="gift-btn" onclick="revealGift()">Claim Your Gift</button>
+     <audio id="birthdaySong">
+      <source src="R-Kelly-Its-Your-Birthday-(HipHopKit.com).mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
   </section>
 
   <section class="card" id="nftCard">
     <div class="card-header">Exclusive NFT-Style Collectible</div>
-    <img src="158329293_3014242958714581_3745583582875608928_n.jpg" alt="Birthday NFT Card">
+    <img src="Gemini_Generated_Image_yvr174yvr174yvr1.png" alt="Birthday NFT Card">
     <div class="card-info">
-      <h2>Birthday Collectible #001</h2>
+      <h2>Birthday Collectible </h2>
       <p><strong>Owner:</strong> Thabsile</p>
       <p><strong>Edition:</strong> 1/1</p>
       <p><strong>Created by:</strong> Sobee</p>
@@ -129,6 +136,10 @@
     function revealGift() {
       const card = document.getElementById('nftCard');
       card.style.display = 'block';
+
+      // Play birthday song 🎶
+      const audio = document.getElementById('birthdaySong');
+      audio.play();
 
       // Launch confetti 🎉
       confetti({
